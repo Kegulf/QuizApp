@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+
+    tools:context="com.example.android.quizapp.QuizActivity">
+
+
+    <!-- Score bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <!-- Score "header" -->
+        <TextView
+            android:id="@+id/score_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/score_text"
+            android:textSize="18sp" />
+
+        <!-- TextView for the scoreCounter -->
+        <TextView
+            android:id="@+id/score_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/score_header"
+            android:layout_toRightOf="@+id/score_header"
+            android:text="0"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <!-- Question panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/question_header"
+            android:textSize="26sp"
+            android:id="@+id/question_header"/>
+
+        <!-- Question container -->
+        <TextView
+            android:id="@+id/question_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Question goes here"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <!-- Button panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <Button
+            android:id="@+id/answer1_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Answer 1" />
+
+        <Button
+            android:id="@+id/answer2_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Answer 2" />
+
+        <Button
+            android:id="@+id/answer3_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Answer 3" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+
+        <ProgressBar
+            android:id="@+id/time_left_ProgressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/progress" />
+
+        <!-- Time left TextView -->
+        <TextView
+            android:id="@+id/time_left_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="10.00 s"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
