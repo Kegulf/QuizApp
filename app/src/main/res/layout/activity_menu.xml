@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context="com.example.android.quizapp.MenuActivity">
@@ -21,15 +22,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9"
-        android:gravity="center"
+        android:layout_weight="3"
+        android:orientation="vertical"
         android:padding="8dp">
+
+        <Spinner
+            android:id="@+id/quiz_theme_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:background="@color/viewBackground"
+            android:textAlignment="center">
+
+        </Spinner>
 
         <Button
             android:id="@+id/start_quiz_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@color/viewBackground"
             android:padding="8dp"
             android:text="@string/start" />
     </LinearLayout>

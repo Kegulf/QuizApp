@@ -10,5 +10,18 @@
     <string name="retry">Retry quiz</string>
     <string name="menu">Main menu</string>
     <string name="start">Start quiz</string>
+    <string name="answer">answer</string>
+    <string name="out_of_time">Out of time</string>
+    <string name="open_answer_placeholder">Fill in answer here</string>
+    <string name="next_question">Press here for next question</string>
+    <string name="show_results">Press here to see the results</string>
+    <string name="default_time_text">10.0 s</string>
+    <string name="multiple_answer_none_chosen">Please choose at least one answer</string>
+    <string name="theme_none_chosen">Please choose a quiz theme</string>
+
+
+
+
+
 
 </resources>

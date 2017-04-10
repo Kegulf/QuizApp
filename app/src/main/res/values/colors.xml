@@ -3,4 +3,20 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="activityBackground">#FF4081</color>
+    <color name="viewBackground">#BBBBBB</color>
+
+    <!-- Progress bar colors -->
+    <color name="progressStartColor">#33FF33</color>
+    <color name="progressEndColor">#008000</color>
+
+    <color name="secondaryProgressStart">#80ffd300</color>
+    <color name="secondaryProgressCenter">#80ffb600</color>
+    <color name="secondaryProgressEnd">#a0ffcb00</color>
+
+    <color name="progressBackgroundStart">#AAAAAA</color>
+    <color name="progressBackgroundCenter">#AAAAAA</color>
+    <color name="progressBackgroundEnd">#AAAAAA</color>
+
+
 </resources>
