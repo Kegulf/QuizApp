@@ -26,15 +26,28 @@
         android:orientation="vertical"
         android:padding="8dp">
 
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:text="@string/fill_in_name"
+            android:textAlignment="center"
+            android:background="@color/viewBackground"
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
         <Spinner
             android:id="@+id/quiz_theme_spinner"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:layout_margin="4dp"
+            android:layout_marginBottom="16dp"
             android:background="@color/viewBackground"
             android:textAlignment="center">
 
         </Spinner>
+
 
         <Button
             android:id="@+id/start_quiz_button"
@@ -43,6 +56,7 @@
             android:layout_gravity="center"
             android:background="@color/viewBackground"
             android:padding="8dp"
+            android:layout_margin="4dp"
             android:text="@string/start" />
     </LinearLayout>
 </LinearLayout>

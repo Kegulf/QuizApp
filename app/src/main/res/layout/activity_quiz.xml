@@ -6,12 +6,46 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
-
+    android:background="@color/activityBackground"
     tools:context="com.example.android.quizapp.QuizActivity">
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+
+        <ProgressBar
+            android:id="@+id/time_left_ProgressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/progress" />
+
+        <!-- Time left TextView -->
+        <TextView
+            android:id="@+id/time_left_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/default_time_text"
+            android:textAlignment="center"
+            android:textSize="@dimen/time_left_text" />
+
+    </RelativeLayout>
+
     <!-- Score bar -->
     <RelativeLayout
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/viewBackground"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -24,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/score_text"
-            android:textSize="18sp" />
+            android:textSize="@dimen/time_left_text" />
 
         <!-- TextView for the scoreCounter -->
         <TextView
@@ -32,10 +66,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
             android:layout_toEndOf="@+id/score_header"
             android:layout_toRightOf="@+id/score_header"
             android:text="0"
-            android:textSize="18sp" />
+            android:textSize="@dimen/time_left_text" />
 
     </RelativeLayout>
 
@@ -49,17 +84,22 @@
 
 
         <TextView
+            android:background="@color/viewBackground"
             android:id="@+id/question_header"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="4dp"
-            android:layout_weight="1.5"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:padding="8dp"
+            android:layout_weight="2.5"
             android:gravity="center"
             android:text="@string/question_header"
             android:textSize="@dimen/headline" />
 
         <!-- Question container -->
         <TextView
+            android:background="@color/viewBackground"
             android:id="@+id/question_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,49 +131,29 @@
             android:layout_weight="4.5"
             android:orientation="vertical">
 
+
+            <RadioGroup
+                android:id="@+id/answer_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </RadioGroup>
+
         </LinearLayout>
 
         <!-- Answer Button -->
         <Button
+            android:background="@color/viewBackground"
             android:id="@+id/answer_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="4dp"
             android:text="@string/answer" />
 
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="8dp">
 
-        <ProgressBar
-            android:id="@+id/time_left_ProgressBar"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:max="100"
-            android:progress="100"
-            android:progressDrawable="@drawable/progress" />
-
-        <!-- Time left TextView -->
-        <TextView
-            android:id="@+id/time_left_TextView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:gravity="center"
-            android:text="@string/default_time_text"
-            android:textAlignment="center"
-            android:textSize="@dimen/time_left_text" />
-
-    </RelativeLayout>
 
 
 </LinearLayout>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#BB2061</color>
+    <color name="colorPrimaryDark">#772061</color>
     <color name="colorAccent">#FF4081</color>
     <color name="activityBackground">#FF4081</color>
-    <color name="viewBackground">#BBBBBB</color>
+    <color name="viewBackground">#EEEEEE</color>
 
     <!-- Progress bar colors -->
     <color name="progressStartColor">#33FF33</color>

@@ -9,7 +9,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.android.controller.QuizController;
-import com.example.android.questionLib.QuestionLibrary;
 
 
 public class QuizActivity extends AppCompatActivity {
@@ -19,6 +18,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button answerButton;
     private ProgressBar timerProgress;
     private LinearLayout answerContainer;
+    private QuizController controller;
 
 
     @Override
@@ -42,17 +42,28 @@ public class QuizActivity extends AppCompatActivity {
 
         // Set this QuizActivity's QuizLibrary to the chosen quiz category
         int quizTheme = getIntent().getExtras().getInt("quizTheme");
-        new QuizController(this, new QuestionLibrary(quizTheme));
+        controller = new QuizController(this, quizTheme);
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        controller.pauseActivity();
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(controller.getActivityState() == QuizController.QUESTIONING_STATE)
+            controller.resumeActivity();
     }
 
+    public void setAnswerButtonText(String text) {
+        answerButton.setText(text);
+    }
     public void setQuestionHeaderText(String text) {
         questionHeader.setText(text);
     }
     public void setQuestionContainerText(String text) {
         questionContainer.setText(text);
-    }
-    public void setQuestionContainerOnClickListener(View.OnClickListener listener) {
-        questionContainer.setOnClickListener(listener);
     }
     public void setScoreContainerText(String text) {
         scoreContainer.setText(text);
@@ -60,7 +71,7 @@ public class QuizActivity extends AppCompatActivity {
     public void setTimeContainerText(String text) {
         timerContainer.setText(text);
     }
-    public void setTimerProgress (int progress) {
+    public void setTimerProgress(int progress) {
         timerProgress.setProgress(progress);
     }
     public void clearAnswerContainer() {

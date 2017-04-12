@@ -3,6 +3,7 @@
     <string name="question_header">Question</string>
     <string name="score_text">Score: </string>
     <string name="correct_answer">Correct answer!</string>
+    <string name="correct_answer_is">Correct answer is:</string>
     <string name="incorrect_answer">Incorrect answer!</string>
     <string name="result">Result</string>
     <string name="result_part1">You managed to get</string>
@@ -13,15 +14,17 @@
     <string name="answer">answer</string>
     <string name="out_of_time">Out of time</string>
     <string name="open_answer_placeholder">Fill in answer here</string>
-    <string name="next_question">Press here for next question</string>
-    <string name="show_results">Press here to see the results</string>
+    <string name="next_question">Next question</string>
+    <string name="show_results">Show results</string>
     <string name="default_time_text">10.0 s</string>
     <string name="multiple_answer_none_chosen">Please choose at least one answer</string>
     <string name="theme_none_chosen">Please choose a quiz theme</string>
-
-
-
-
+    <string name="fill_in_name">Fill in your name</string>
+    <string name="name_none_supplied">Please fill in your name</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="well_done">Well done</string>
+    <string name="you_need_practice">You need practice</string>
+    <string name="open_answer_none_supplied">Please enter an answer</string>
 
 
 </resources>

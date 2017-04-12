@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/activityBackground"
     tools:context="com.example.android.quizapp.ResultActivity">
 
     <!-- Results Container -->
@@ -19,6 +20,7 @@
 
         <!-- Result headline -->
         <TextView
+            android:id="@+id/result_headline_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -86,10 +88,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="1"
+            android:background="@color/viewBackground"
             android:text="@string/retry" />
 
         <!-- Menu button -->
         <Button
+            android:background="@color/viewBackground"
             android:id="@+id/menu_button_resultscreen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

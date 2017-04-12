@@ -125,7 +125,7 @@ public class QuestionLibrary {
     };
 
     private static final int basicMathQuestionType[] = new int[]{
-            SINGLE_CHOICE,  // 0
+            OPEN_ANSWER,  // 0
             SINGLE_CHOICE,  // 1
             SINGLE_CHOICE,  // 2
             SINGLE_CHOICE,  // 3
@@ -139,47 +139,44 @@ public class QuestionLibrary {
 
 
     private static final String harryPotterQuestions[] = new String[]{
-            "40 + 2 = x\nx = ?",  // 0
-            "3 * 15 - 3 = x\nx = ?",  // 1
-            "72 / 12 * 7= x\nx = ?", // 2
-            "14 * 3 = x\nx = ?", // 3
-            "(64 / 4) * 7 - 14 = x\nx = ?",  // 4
-            "2^5 + 10 = x\nx = ?",   // 5
-            "6 * (-14) / (-2) = x\nx = ?", // 6
-            "121 / 11 * 4 - 2 = x\nx = ?", // 7
-            "4^3 - 22 = x\nx = ?", // 8
-            "squareRoot(42 * 42) = x\nx = ?" // 9
+            "What is Harry Potter's middle name?",  // 0
+            "Who is Harry's two best friends",  // 1
+            "The name of Harry's owl is ___", // 2
+            "What is Ron's full name?", // 3
+            "Capturing the Snitch in Quidditch will award ___ points",  // 4
+            "Hagrid had a pet named Aragog\nWhat type of animal was this?",   // 5
+            "What is Hagrid's first name?", // 6
     };
 
     private static final String harryPotterAnswers[][] = new String[][]{
-            {"24", "38", "42"}, // 0
-            {"42", "36", "-135"}, // 1
-            {"12", "42", "69"}, // 2
-            {"32", "52", "42"}, // 3
-            {"12", "42", "90"}, // 4
-            {"26", "74", "42"}, // 5
-            {"42", "-42", "0"}, // 6
-            {"37", "42", "51"}, // 7
-            {"95", "42", "23"}, // 8
-            {"-42", "76", "42"} // 9
+            {"Jacob", "James", "John"}, // 0
+            {"Ron", "Ginny", "Neville", "Hermione"}, // 1
+            {"Hedwig"}, // 2
+            {"Ronald Bilius Weasley", "Ron Weasel", "Ronald Phillip Weasley"}, // 3
+            {"150"}, // 4
+            {"Unicorn", "Dragon", "Spider"}, // 5
+            {"Frank", "Albus", "Rubeus"}, // 6
     };
 
 
     private static final String harryPotterCorrectAnswers[][] = new String[][]{
-            {"42"}, {"42"}, {"42"}, {"42"}, {"42"}, {"42"}, {"42"}, {"42"}, {"42"}, {"-42", "42"}
+            {"James"}, // 0
+            {"Hermione", "Ron"}, // 1
+            {"Hedwig"}, // 2
+            {"Ronald Bilius Weasley"}, // 3
+            {"150"}, // 4
+            {"Spider"}, // 5
+            {"Rubeus"} // 6
     };
 
     private static final int harryPotterQuestionType[] = new int[]{
             SINGLE_CHOICE,  // 0
-            SINGLE_CHOICE,  // 1
-            SINGLE_CHOICE,  // 2
+            MULTIPLE_CHOICE,  // 1
+            OPEN_ANSWER,  // 2
             SINGLE_CHOICE,  // 3
-            SINGLE_CHOICE,  // 4
+            OPEN_ANSWER,  // 4
             SINGLE_CHOICE,  // 5
             SINGLE_CHOICE,  // 6
-            SINGLE_CHOICE,  // 7
-            OPEN_ANSWER,  // 8
-            MULTIPLE_CHOICE,  // 9
     };
 
 

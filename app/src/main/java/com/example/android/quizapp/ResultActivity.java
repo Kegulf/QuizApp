@@ -9,8 +9,12 @@ import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
 
-    private TextView resultView, scoreView;
+    private TextView resultView, scoreView, resultHeadline;
     private Button retryButton, menuButton;
+
+    private int correctAnswers, score, numOfQuestions;
+
+    private String playerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +23,15 @@ public class ResultActivity extends AppCompatActivity {
 
         // Save the extras supplied by the QuizActivity
         Bundle bundle = getIntent().getExtras();
-        int correctAnswers = bundle.getInt("correct");
-        int score = bundle.getInt("score");
-        int numOfQuestions = bundle.getInt("numOfQuestions");
+        correctAnswers = bundle.getInt("correct");
+        score = bundle.getInt("score");
+        numOfQuestions = bundle.getInt("numOfQuestions");
+        playerName = bundle.getString("playerName");
 
         // Initialize the Buttons and TextViews
         resultView = (TextView) findViewById(R.id.final_result_TextView);
         scoreView = (TextView) findViewById(R.id.final_score_TextView);
+        resultHeadline = (TextView) findViewById(R.id.result_headline_TextView);
         retryButton = (Button) findViewById(R.id.retry_button);
         menuButton = (Button) findViewById(R.id.menu_button_resultscreen);
 
@@ -35,13 +41,13 @@ public class ResultActivity extends AppCompatActivity {
 
 
         // Add OnClickListeners to the retry and menu button.
-        // I assume the anon method syntax was added by Android Studio
-        // when I used CTRL + ALT + L to format the code.
         retryButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 ResultActivity.this.finish();
-                startActivity(new Intent(ResultActivity.this, QuizActivity.class));
+                Intent intent = new Intent(ResultActivity.this, QuizActivity.class);
+                intent.putExtras(getIntent().getExtras()); // This one I liked x)
+                startActivity(intent);
             }
         });
         menuButton.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +58,26 @@ public class ResultActivity extends AppCompatActivity {
             }
         });
 
+        setHeadline();
 
+    }
+
+    private void setHeadline() {
+
+        String headline = "";
+
+        int correctAnswersPercentage = correctAnswers / numOfQuestions * 100;
+
+        if( correctAnswersPercentage == 100)
+            headline += getString(R.string.congratulations);
+        else if (correctAnswersPercentage < 75)
+            headline += getString(R.string.well_done);
+        else if(correctAnswersPercentage < 50)
+            headline += getString(R.string.you_need_practice);
+
+        headline += " " + playerName;
+
+
+        resultHeadline.setText(headline);
     }
 }
